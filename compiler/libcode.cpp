@@ -1367,6 +1367,7 @@ static void injectCode(unique_ptr<ifstream>& enrobage, ostream& dst)
 
 static void compileCLLVM(Tree signals, int numInputs, int numOutputs)
 {
+#ifdef LLVM_BUILD
 #ifdef CLANG_BUILD
     // FIR is generated with internal real instead of FAUSTFLOAT (see InstBuilder::genBasicTyped)
     gGlobal->gFAUSTFLOAT2Internal = true;
@@ -1382,6 +1383,7 @@ static void compileCLLVM(Tree signals, int numInputs, int numOutputs)
     new_comp->prepare(signals);
 #else
     throw faustexception("ERROR : -lang cllcm not supported since LLVM backend is not built\n");
+#endif
 #endif
 }
 
