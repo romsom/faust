@@ -15,7 +15,7 @@ set ( FIR_BACKEND    COMPILER STATIC DYNAMIC        CACHE STRING  "Include FIR b
 set ( INTERP_BACKEND COMPILER STATIC DYNAMIC        CACHE STRING  "Include INTERPRETER backend" FORCE )
 set ( JAVA_BACKEND   COMPILER STATIC DYNAMIC        CACHE STRING  "Include JAVA backend"        FORCE )
 set ( JULIA_BACKEND  COMPILER STATIC DYNAMIC        CACHE STRING  "Include Julia backend"       FORCE )
-set ( LLVM_BACKEND   COMPILER STATIC DYNAMIC        CACHE STRING  "Include LLVM backend"        FORCE )
+set ( LLVM_BACKEND   OFF                            CACHE STRING  "Include LLVM backend"        FORCE )
 set ( OLDCPP_BACKEND COMPILER STATIC DYNAMIC        CACHE STRING  "Include old CPP backend"     FORCE )
 set ( RUST_BACKEND   COMPILER STATIC DYNAMIC        CACHE STRING  "Include Rust backend"        FORCE )
 set ( SOUL_BACKEND   COMPILER STATIC DYNAMIC        CACHE STRING  "Include SOUL backend"        FORCE )
